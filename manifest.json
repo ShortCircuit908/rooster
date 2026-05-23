@@ -1,0 +1,48 @@
+{
+	"description": "Send push notifications for Noterook events",
+	"manifest_version": 2,
+	"name": "Rooster",
+	"version": "1.0",
+	"homepage_url": "https://shortcircuit908.dev",
+	"browser_specific_settings": {
+		"gecko": {
+			"id": "rooster@shortcircuit908.dev",
+			"data_collection_permissions": {
+				"required": ["none"]
+			}
+		}
+	},
+	
+	"icons": {
+		"32": "img/icon_32x.png",
+		"64": "img/icon_64x.png"
+	},
+
+	"content_scripts": [
+		{
+			"matches": ["*://*.noterook.net/*"],
+			"js": ["rooster.js"]
+		}
+	],
+	
+	"background": {
+		"persistent": true,
+		"scripts": [
+			"notif_manager.js"
+		]
+	},
+	
+	"browser_action": {
+		"default_icon": {
+			"32": "img/icon_32x.png",
+			"64": "img/icon_64x.png"
+		},
+		"default_title": "Rooster Settings",
+		"default_popup": "settings/index.html"
+	},
+	
+	"permissions": [
+		"notifications",
+		"storage"
+	]
+}

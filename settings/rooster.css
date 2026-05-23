@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ccc;
+    background-color: #444670;
+}
+
+.listbox {
+    border: 2px solid #666;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.listbox-header {
+    border-bottom: 2px solid #666;
+    width: 100%;
+    position: relative;
+    background-color: #262840;
+    display: inline-block;
+}
+
+.listbox-content {
+    width: 100%;
+}
+
+.listbox-content > *:nth-child(even) {
+    background-color: #3b3d63;
+}
+
+.listbox-item {
+    width: 100%;
+}
+
+.user-entry {
+    display: flex;
+    justify-content: space-between;
+}
