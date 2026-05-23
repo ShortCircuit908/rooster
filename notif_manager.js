@@ -27,7 +27,7 @@ const formatString = (template, ...args) => {
 function getPlainText(html) {
 	let span = document.getElementById("rooster-plain-text") || document.createElement("span");
 	span.setAttribute("id", "rooster-plain-text");
-	span.innerHTML = html;
+	span["innerHTML"] = DOMPurify.sanitize(html);
 	return span.innerText;
 }
 
