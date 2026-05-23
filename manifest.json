@@ -3,7 +3,7 @@
 	"manifest_version": 2,
 	"name": "Rooster",
 	"version": "1.0",
-	"homepage_url": "https://shortcircuit908.dev",
+	"homepage_url": "https://github.com/ShortCircuit908/rooster",
 	"browser_specific_settings": {
 		"gecko": {
 			"id": "rooster@shortcircuit908.dev",
