@@ -201,8 +201,8 @@ function loadSelectedUsers() {
 		   );
 }
 
-
 browser.runtime.onMessage.addListener(handleMessage);
 browser.notifications.onClicked.addListener(handleAction);
 browser.storage.local.onChanged.addListener(loadSelectedUsers);
 loadSelectedUsers();
+console.log("[Rooster][Notif] Listening for events: " + JSON.stringify(Object.keys(event_handlers)));

@@ -10,15 +10,21 @@ const target_events = [
 ];
 
 target_events.forEach(target_event => {
-	document.addEventListener(target_event, function (e) {
-		browser.runtime.sendMessage(
-			{
-				"event": target_event,
-				"data": e.detail,
-				"self": window.__NR_APP?.user.username,
-			}
-		);
-	});
+	document.addEventListener(
+		target_event,
+		function (e) {
+			console.log("[Rooster] Passing event: " + target_event);
+			browser.runtime.sendMessage(
+				{
+					"event": target_event,
+					"data": e.detail,
+					"self": window.__NR_APP?.user.username
+				}
+			);
+		},
+		true,
+		true
+	);
 });
 
 console.log("[Rooster] Listening for events: " + JSON.stringify(target_events));
